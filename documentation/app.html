@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>FinFunder - Document</title>
+  <!-- Meta -->
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700&display=swap" rel="stylesheet">
+  <!-- Theme CSS -->
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+
+  <style type="text/css">
+    <style>
+      table {
+          width: 100%;
+          border-collapse: collapse;
+          margin: 20px 0;
+          font-size: 16px;
+      }
+      th, td {
+          padding: 12px 15px;
+          border: 1px solid #ddd;
+          text-align: left;
+      }
+      th {
+          background-color: #f4f4f4;
+          font-weight: bold;
+      }
+      tbody tr:nth-child(even) {
+          background-color: #f9f9f9;
+      }
+  </style>
+  </style>
+</head>
+
+<body class="docs-page" data-bs-spy="scroll" data-bs-target="#docs-nav" data-bs-root-margin="-100px 0px -40%">
+  <header class="header fixed-top">
+    <div class="branding docs-branding">
+      <div class="container-fluid position-relative py-2">
+        <div class="docs-logo-wrapper gap-2 d-flex">
+          <button id="docs-sidebar-toggler" class="docs-sidebar-toggler docs-sidebar-visible d-xl-none" type="button">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+          <div class="site-logo">
+            <a class="navbar-brand" href="index.html">
+              <span class="logo-text">Fin<span class="text-alt">Funder <strong>Flutter</strong> App</span></span>
+            </a>
+            <span class="badge bg-primary"></span>
+          </div>
+        </div>
+        
+        <div class="docs-top-utilities d-flex justify-content-end align-items-center gap-3">
+          <div class="top-search-box d-none d-lg-flex">
+            <form class="search-form">
+              <input type="search" placeholder="Search the docs..." name="search" class="form-control search-input" autocomplete="off">
+              <div id="results"></div>
+            </form>
+          </div>
+
+          <button type="button" class="btn-changelog btn btn-primary d-none d-lg-flex" data-bs-toggle="modal" data-bs-target="#changelogModal">
+            Changelog
+          </button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <div class="docs-wrapper">
+    <div id="docs-sidebar" class="docs-sidebar">
+      <div class="top-search-box d-lg-none p-3">
+        <form class="search-form">
+          <input type="text" placeholder="Search the docs..." name="search" class="form-control search-input">
+          <button type="submit" class="btn search-btn" value="Search">
+            <i class="fas fa-search"></i>
+          </button>
+        </form>
+      </div>
+      <nav id="docs-nav" class="docs-nav navbar">
+        <ul class="section-items list-unstyled nav flex-column pb-3">
+
+          <!-- Installation -->
+          <li class="nav-item section-title">
+            <a class="nav-link scrollto" href="#section-intro">Intro</a>
+            <ul class="nav flex-column mt-2 lvl2">
+              <li class="nav-item">
+                <a class="nav-link scrollto" href="#overview">Overview</a> 
+              </li>
+
+              <li class="nav-item">
+                <a class="nav-link scrollto" href="#requirment">Requirments</a> 
+              </li> 
+
+              <li class="nav-item">
+                <a class="nav-link scrollto" href="#install-app">Installation Flutter App</a> 
+              </li>
+
+              <li class="nav-item">
+                <a class="nav-link scrollto" href="#build-install-app">Build App & Config</a> 
+              </li>
+ 
+            </ul>
+          </li>  
+          <!-- Usages Area -->
+          <li class="nav-item section-title">
+            <a class="nav-link scrollto" href="#section-app-usages">APP Usages</a>
+            <ul class="nav flex-column mt-2 lvl2">
+              <li class="nav-item">
+                <a class="nav-link scrollto" href="#user-app-guide">App Guide</a>
+              </li>
+            </ul>
+          </li>
+
+          <!-- Support Area -->
+          <li class="nav-item section-title">
+            <a class="nav-link scrollto" href="#section-support">Help & Support</a>
+            <ul class="nav flex-column mt-2 lvl2">
+              <li class="nav-item">
+                <a class="nav-link scrollto" href="#user-support">Support</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+    </div>
+
+
+    <div class="docs-content">
+      <div class="container">
+
+
+        <article class="docs-article" id="section-intro">
+          <header class="docs-header">
+            <h1 class="docs-heading">Overview</h1>
+            <section class="docs-intro" id="overview">
+              <p>FinFunder is a cutting-edge cryptocurrency investment and trading application. This documentation provides a comprehensive guide for building and configuring the FinFunder Flutter application.
+              <div style="background-color:#fcf2d9; color:black; padding:10px; border-radius:5px;">
+                  <strong>Note:</strong> This app is not an independent app. You must purchase the PHP code from Codecanyon using this link: 
+                  <a target="_blank" href="https://codecanyon.net/item/finfunder-matrix-and-hiyp-investments-with-crypto-trading-platform/51672333" target="_blank">FinFunder - Matrix and HYIP Investments with Crypto Trading Platform</a>.
+              </div>
+              </p> 
+            </section>
+          </header>
+
+          <section class="docs-article" id="requirment">
+            <h2 class="section-heading">System Requirements</h2>
+            <p>
+              Before proceeding with the installation, ensure that your system meets the following requirements:
+            </p>
+            <table>
+              <thead>
+                  <tr>
+                      <th>Component</th>
+                      <th>Minimum Requirement</th>
+                      <th>Recommended Requirement</th>
+                  </tr>
+              </thead>
+              <tbody>
+                  <tr>
+                      <td>x86_64 CPU Cores</td>
+                      <td>4</td>
+                      <td>8</td>
+                  </tr>
+                  <tr>
+                      <td>Memory (GB)</td>
+                      <td>8</td>
+                      <td>16</td>
+                  </tr>
+                  <tr>
+                      <td>Display resolution (pixels)</td>
+                      <td>WXGA (1366 x 768)</td>
+                      <td>FHD (1920 x 1080)</td>
+                  </tr>
+                  <tr>
+                      <td>Free disk space (GB)</td>
+                      <td>4.0</td>
+                      <td>52.0</td>
+                  </tr>
+              </tbody>
+          </table>
+
+          </section> 
+        </article>
+
+
+        <!-- Flutter Build  -->
+        <article class="docs-article" id="install-app">
+          <header class="docs-header">
+            <h1 class="docs-heading">Flutter Installation Guide</h1>
+            <section class="docs-intro">
+              <p>
+                <ol>
+                  <li>
+                      To Install Flutter <a href="https://flutter.dev/docs/get-started/install" target="_blank">go to this website</a> and follow the platform-specific instructions.
+                  </li>
+                  <li>
+                      Download <a href="https://developer.android.com/studio" target="_blank">Android Studio</a> from here.
+                  </li>
+                  <li>
+                      After installing, open Android Studio and select <strong>More Action</strong> or the <strong>3 dots</strong> in the top corner. Then select <strong>SDK Manager</strong> -> <strong>Android SDK/Sdk Tools</strong>. Click <strong>Android SDK Command-line Tools(latest)</strong> then <strong>apply</strong>. It will start downloading the tool.
+                  </li>
+                  <li>
+                      After the download is completed, go to Android Studio plugins section and install <strong>Dart & Flutter</strong> plugins.
+                  </li>
+                  <li>
+                      Now run this command in your terminal:
+                      <pre><code>flutter doctor</code></pre>
+                  </li>
+              </ol>
+
+                <div style="background-color:#e3eafa; color:black; padding:10px; border-radius:5px;">
+                If this does not work, follow the guide on the <a href="https://flutter.dev/docs/get-started/install">first website</a> where you downloaded Flutter from and follow the official guide.
+                </div>
+              </p>
+
+              <p>
+                <div style="background-color:#e3eafa; color:black; padding:10px; border-radius:5px;">
+                  - After completing all steps, open our project on Android Studio and run `flutter pub get` from the terminal.
+                </div>
+              </p>
+            </section>
+
+          </header>
+        </article>
+        <hr>
+        <article class="docs-article" id="build-install-app">
+          <header class="docs-header">
+            <h1 class="docs-heading">Change Base API URL</h1>
+            <section class="docs-intro">
+              <div style="background-color:#f0e2e1; color:black; padding:10px; border-radius:5px;">
+                Must remember!!** Don’t put a slash (/) at the end of your base URL.
+              </div>
+              <p>- Use your admin url as base url. First you have to install your admin panel. For example: If your admin url is <strong>https://your_domain.com/admin</strong> then base url will be <strong>https://your_domain.com</strong> and add at the end. So the final url will be <strong>https://your_domain.com</strong>. Open <strong>[project]/lib/core/strings/endpoints.dart</strong> and replace <code>baseUrl</code> value with your own URL.</p>
+            </section>
+
+            <h1 class="docs-heading">Change App Logo</h1>
+            <section class="docs-intro">
+              <ul>
+                  <li>First place your logo in the <strong>[PROJECT]/assets/icon/</strong> folder.</li>
+                  <li>Go to the <strong>pubspec.yaml</strong> file.</li>
+              </ul>
+
+              <pre><code>dev_dependencies:
+
+              flutter_launcher_icons: "^0.13.1"
+
+              flutter_launcher_icons:
+                android: "launcher_icon"
+                ios: true
+                image_path: "assets/icon/icon.png"
+              </code></pre>
+
+              <ul>
+                  <li>Change the image path <strong>"assets/logo/logo.png"</strong> to your logo's path. You can just change the icon name here -> <strong>assets/icon/icon.png</strong></li>
+                  <li>Run <code>dart run flutter_launcher_icons</code> in the terminal.</li>
+              </ul>
+              <img src="images/app/change_icon.jpg" class="w-100"> 
+            </section>
+
+            <h1 class="docs-heading">Change App Name</h1>
+            <section class="docs-intro">
+              <ul>
+                  <li>Activate <strong>rename</strong> by running <code>flutter pub global activate rename</code></li>
+                  <li>Change app name by running <code>rename setAppName --targets ios,android --value "Your App Name"</code></li>
+                  <li>Change app Bundle by running <code>rename setBundleId --targets android --value "com.example.bundleId"</code></li>
+              </ul>
+
+              <div style="background-color:#deebfb; color:black; padding:10px; border-radius:5px;">
+                  The Bundle ID and Package Name are unique identifiers, chosen by you. They can never be the same for two applications inside the Apple App Store or Google Play Store, respectively. A common format is <code>com.company.app</code>.
+                  <br><strong>Note:</strong> Do not use hyphens (-) or underscores (_), or you might run into errors.
+              </div>
+            </section>  
+            <hr>
+            <h1 class="docs-heading">App build & release</h1>
+            <section class="docs-intro">
+              <h3>Create an upload keystore</h3>
+              <ul>
+                  <li><a href="https://">Go to</a> this link and follow the steps accordingly till the "Reference the keystore from the app" section. You will get:
+                      <ul>
+                          <li>a <strong>upload-keystore.jks</strong> file</li>
+                          <li>a <strong>key.properties</strong> file</li>
+                      </ul>
+                  </li>
+              </ul>
+
+              <h4>To Create Keystore, use the following command at the command line</h4>
+
+              <ul>
+                  <li>On macOS or Linux, use the following command:</li>
+              </ul>
+              <pre><code>keytool -genkey -v -keystore ~/upload-keystore.jks -keyalg RSA \
+                      -keysize 2048 -validity 10000 -alias upload
+              </code></pre>
+
+              <ul>
+                  <li>On Windows, use the following command in PowerShell:</li>
+              </ul>
+              <pre><code>keytool -genkey -v -keystore $env:USERPROFILE\upload-keystore.jks 
+                      -storetype JKS -keyalg RSA -keysize 2048 -validity 10000 
+                      -alias upload
+              </code></pre>
+
+              <div style="background-color:#deebfb; color:black; padding:10px; border-radius:5px;">
+                  Note: When creating a keystore file, it will ask for some details, including keyPassword and storePassword. Use the same password for both and note them. We will need this later.
+              </div>
+              <br>
+              <div style="background-color:#fcf2d9; color:black; padding:10px; border-radius:5px;">
+                  Note: However, keep both files private. Don’t check them into public source control!
+              </div>
+              <br>
+
+              <ul>
+                  <li>Move the <strong>upload-keystore.jks</strong> file to <strong>[project]/android/app/</strong> folder for easy management.</li>
+                  <li>Edit the <strong>key.properties</strong> file in <strong>[project]/android/</strong> and update the storeFile path to <strong>upload-keystore.jks</strong>:</li>
+              </ul>
+
+              <pre><code>storePassword=password-from-NOTE1
+              keyPassword=password-from-NOTE1
+              keyAlias=upload
+              storeFile=upload-keystore.jks
+              </code></pre>
+
+              <ul>
+                  <li>Run <code>flutter clean && flutter pub get</code> in the terminal.</li>
+              </ul>
+
+              <h3>Build for Android</h3>
+
+              <ul>
+                  <li>For release build, you can run the command: <code>flutter build apk</code></li>
+                  <li>You will get a larger merged APK. You can split them with this command: <code>flutter build apk --split-per-abi</code></li>
+                  <li>Build file location: <strong>[project]/build/app/outputs/apk/release/</strong></li>
+                  <li>For deploying it, please follow this <a href="https://docs.flutter.dev/deployment/android">documentation</a>.</li>
+              </ul>
+
+              <h3>Build for iOS</h3>
+
+              <ul>
+                  <li>Follow <a href="https://docs.flutter.dev/deployment/ios">this guide</a> to build and release iOS app.</li>
+              </ul>
+              <p><strong>Things to Note before building for iOS:</strong></p>
+              <ul>
+                  <li>A valid <strong>Apple developer account</strong></li>
+                  <li>A device that can run XCode</li>
+              </ul>
+
+              <div style="background-color:#deebfb; color:black; padding:10px; border-radius:5px;">
+                  To demo the iOS app, run the app in debug mode using an XCode iOS simulator.
+              </div>
+
+            </section>
+          </header>
+        </article>
+
+
+        <article class="docs-article" id="section-app-usages">
+          <header class="docs-header">
+            <h1 class="docs-heading">App User Guide</h1>
+            <section class="docs-intro" id="user-app-guide">
+                <h4>Login & Registration</h4>
+                <p>
+                    Once you successfully install the FinFunder app, the initial screen will show the login page. If you already have an account, just enter your username and password on the login screen in the input fields. A screenshot is given below:
+                </p>
+                <img src="images/app/login.jpg" class="w-50">
+                <br>
+                <p>
+                    If you do not have an account, click on the registration button. The registration screen will appear. Provide the required information and submit it. You may need verification if the admin has enabled it. Then you can log in with your username and password. A screenshot is given below:
+                </p>
+                <img src="images/app/registration.jpg" class="w-50">
+                
+                <hr>
+
+                <h4>Deposit Balance</h4>
+                <p>
+                    From the menu, click on the deposit option. You will see the deposit screen where you can enter the amount you want to deposit. Follow the payment instructions provided in the app. If the deposit uses a gateway, the balance will be added to your wallet automatically. If it's manual, you will receive a deposit confirmation message.
+                </p>
+                <div class="d-flex">
+                    <img src="images/app/deposit.jpg" class="w-50" style="margin-right: 10px;">
+                    <img src="images/app/deposit_history.jpg" class="w-50">
+                </div>
+
+                <hr>
+
+                <h4>Withdraw Balance</h4>
+                <p>
+                    To withdraw your balance, navigate to the withdrawal option from the menu. Enter the amount you wish to withdraw and follow the instructions provided. You will receive a confirmation message once the withdrawal process is complete.
+                </p>
+                <div class="d-flex">
+                    <img src="images/app/withdraw.jpg" class="w-50" style="margin-right: 10px;">
+                    <img src="images/app/withdraw_history.jpg" class="w-50">
+                </div>
+
+                <hr>
+
+                <h4>Invest</h4>
+                <p>
+                    The invest feature allows you to invest your balance in various plans or opportunities provided by the app. Go to the invest section from the menu, choose the investment option that suits you, and follow the instructions to complete your investment.
+                </p>
+                <img src="images/app/investment.jpg" class="w-50">
+
+                <hr>
+
+                <h4>Matrix Investment</h4>
+                <p>
+                    To trade, navigate to the trade section in the menu. You can view available trading options, make trades, and manage your trades from this section. Follow the instructions provided for each trade option.
+                </p>
+                <img src="images/app/matrix_invest.jpg" class="w-50">
+
+                <hr>
+
+                <h4>Staking Investment</h4>
+                <p>
+                    To trade, navigate to the trade section in the menu. You can view available trading options, make trades, and manage your trades from this section. Follow the instructions provided for each trade option.
+                </p>
+                <img src="images/app/staking_invest.jpg" class="w-50">
+
+                <hr>
+
+                <h4>Trade</h4>
+                <p>
+                    To trade, navigate to the trade section in the menu. You can view available trading options, make trades, and manage your trades from this section. Follow the instructions provided for each trade option.
+                </p>
+                <img src="images/app/trade.jpg" class="w-50">
+
+                <hr>
+
+                <h4>Transaction Report</h4>
+                <p>
+                    The transaction report feature allows you to view a detailed report of all your transactions. Go to the transaction report section from the menu to see a comprehensive list of your deposits, withdrawals, investments, and trades.
+                </p>
+                <img src="images/app/transaction.jpg" class="w-50">
+
+                <hr>
+
+                <h4>Profile Settings</h4>
+                <p>
+                    To update your profile settings, navigate to the profile settings section from the menu. Here, you can update your personal information, change your password, and customize your app settings.
+                </p>
+                <img src="images/app/profile_update.jpg" class="w-50">
+            </section>
+
+          </header>
+        </article>
+
+        <article class="docs-article" id="section-support">
+          <header class="docs-header">
+            <h1 class="docs-heading">Help & Support</h1>
+            <section class="docs-intro">
+              <p>
+                If you have any questions, encounter issues, or need assistance with KloudInnovation, our dedicated support team is ready to assist you.
+                <br>
+                <br>
+                Don't hesitate to reach out for support:
+                <br>
+                <br>
+                Open a <a href="https://support.kloudinnovation.com/" target="_blank">Support Ticket</a>
+                <br>
+                <br>
+                At KloudInnovation, we are committed to delivering prompt and efficient responses, ensuring you have an exceptional experience with our services.
+              </p> 
+            </section>
+          </header>
+        </article>
+
+      </div>
+    </div>
+  </div>
+  <!--docs-wrapper-->
+
+  <!-- Modal -->
+  <div class="modal fade" id="changelogModal" tabindex="-1" aria-labelledby="changelogModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-scrollable">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h4 class="modal-title px-3 py-1" id="changelogModalLabel">Changelog</h4>
+            <button type="button" class="btn-close p-4" data-bs-dismiss="modal" aria-label="Close">
+            </button>
+          </div>
+          <div class="modal-body">
+            <div class="container">
+              <div class="row justify-content-center">
+                <div class="col-12">
+                  <h6 class="mt-3"> <span class="p-2"> Version 1.0</span> 04 July 2024</h6>
+                  <ul class="mt-3 mb-5">
+                    <li class="ms-3">First Verison Releaase</li> 
+                    </ul>
+                </div>
+                <!--end col-->
+              </div>
+              <!--end row-->
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          </div>
+        </div>
+    </div>
+  </div>
+
+ 
+  <script type="text/javascript" src="js/jquery.js"></script>
+  <script type="text/javascript" src="js/bootstrap.js"></script>
+  <script type="text/javascript" src="js/zoom.js"></script>
+  <script type="text/javascript" src="js/flesler.js"></script>
+  <script type="text/javascript" src="js/fuse.js"></script> 
+  <script type="text/javascript" src="js/highlight.js"></script>
+  <script type="text/javascript" src="js/hljs.js"></script>
+  <script type="text/javascript" src="js/script.js"></script>
+</body>
+
+</html>

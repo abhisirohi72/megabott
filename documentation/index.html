@@ -1,0 +1,965 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>FinFunder - Document</title>
+  <!-- Meta -->
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700&display=swap" rel="stylesheet">
+  <!-- Theme CSS -->
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+
+<body class="docs-page" data-bs-spy="scroll" data-bs-target="#docs-nav" data-bs-root-margin="-100px 0px -40%">
+  <header class="header fixed-top">
+    <div class="branding docs-branding">
+      <div class="container-fluid position-relative py-2">
+        <div class="docs-logo-wrapper gap-2 d-flex">
+          <button id="docs-sidebar-toggler" class="docs-sidebar-toggler docs-sidebar-visible d-xl-none" type="button">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+          <div class="site-logo">
+            <a class="navbar-brand" href="index.html">
+              <span class="logo-text">Fin<span class="text-alt">Funder</span></span>
+            </a>
+            <span class="badge bg-primary"></span>
+          </div>
+        </div>
+        
+        <div class="docs-top-utilities d-flex justify-content-end align-items-center gap-3">
+          <div class="top-search-box d-none d-lg-flex">
+            <form class="search-form">
+              <input type="search" placeholder="Search the docs..." name="search" class="form-control search-input" autocomplete="off">
+              <div id="results"></div>
+            </form>
+          </div>
+
+          <button type="button" class="btn-changelog btn btn-primary d-none d-lg-flex" data-bs-toggle="modal" data-bs-target="#changelogModal">
+            Changelog
+          </button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <div class="docs-wrapper">
+    <div id="docs-sidebar" class="docs-sidebar">
+      <div class="top-search-box d-lg-none p-3">
+        <form class="search-form">
+          <input type="text" placeholder="Search the docs..." name="search" class="form-control search-input">
+          <button type="submit" class="btn search-btn" value="Search">
+            <i class="fas fa-search"></i>
+          </button>
+        </form>
+      </div>
+      <nav id="docs-nav" class="docs-nav navbar">
+        <ul class="section-items list-unstyled nav flex-column pb-3">
+
+          <!-- Installation -->
+          <li class="nav-item section-title">
+            <a class="nav-link scrollto" href="#section-intro">Intro</a>
+            <ul class="nav flex-column mt-2 lvl2">
+              <li class="nav-item">
+                <a class="nav-link scrollto" href="#overview">Overview</a> 
+              </li>
+
+              <li class="nav-item">
+                <a class="nav-link scrollto" href="#requirment">Requirments</a> 
+              </li>
+
+              <li class="nav-item">
+                <a class="nav-link scrollto" href="#install-local">Installation in Local</a> 
+              </li>
+
+              <li class="nav-item">
+                <a class="nav-link scrollto" href="#install-server">Installation in Server</a> 
+              </li>
+
+              <li class="nav-item">
+                <a class="nav-link scrollto" href="#update-process">Update Process</a> 
+              </li>
+            </ul>
+          </li>
+
+          <!-- Admin Panel -->
+          <li class="nav-item section-title">
+            <a class="nav-link scrollto" href="#section-admin-panel">Admin Panel</a>
+            <ul class="nav flex-column mt-2 lvl2">
+              <li class="nav-item">
+                <a class="nav-link scrollto" href="#item-2-application-setting">Application Setting</a>
+                <ul class="nav flex-column mt-1 lvl3">
+                  <li class="nav-item section-child">
+                    <a class="nav-link scrollto" href="#item-application-setting-general">General</a>
+                  </li>
+                  <li class="nav-item section-child">
+                    <a class="nav-link scrollto" href="#item-application-setting-system-configuration">System Configuration</a>
+                  </li>
+                  <li class="nav-item section-child">
+                    <a class="nav-link scrollto" href="#item-application-setting-comission-charges">Commission & Charges</a>
+                  </li>
+                  <li class="nav-item section-child">
+                    <a class="nav-link scrollto" href="#item-application-setting-kyc-configuration">KYC Configuration</a>
+                  </li>
+                  <li class="nav-item section-child">
+                    <a class="nav-link scrollto" href="#item-application-setting-plugin-configuration">Plugin Configuration</a>
+                  </li>
+                  <li class="nav-item section-child">
+                    <a class="nav-link scrollto" href="#item-application-system-information">System Information</a>
+                  </li>
+                  <li class="nav-item section-child">
+                    <a class="nav-link scrollto" href="#item-application-setting-automation">Automation</a>
+                  </li>
+                  <li class="nav-item section-child">
+                    <a class="nav-link scrollto" href="#item-application-setting-manage-language">Manage Language</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link scrollto" href="#item-2-security-firewall">Security Firewall</a>
+                <ul class="nav flex-column mt-1 lvl3">
+                  <li class="nav-item section-child">
+                    <a class="nav-link scrollto" href="#item-security-firewall-settings">Settings</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link scrollto" href="#item-2-transaction-services">Transaction Services</a>
+                <ul class="nav flex-column mt-1 lvl3">
+                  <li class="nav-item section-child">
+                    <a class="nav-link scrollto" href="#item-transaction-services-manage-pins">Manage Pins</a>
+                  </li>
+                  <li class="nav-item section-child">
+                    <a class="nav-link scrollto" href="#item-transaction-services-payment-process">Payment Process</a>
+                  </li>
+                  <li class="nav-item section-child">
+                    <a class="nav-link scrollto" href="#item-transaction-services-manage-withdraws">Manage Withdraw</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link scrollto" href="#item-2-matrix-scheme">Matrix Scheme</a>
+                <ul class="nav flex-column mt-1 lvl3">
+                  <li class="nav-item section-child">
+                    <a class="nav-link scrollto" href="#item-matrix-scheme-parameters">Matrix Parameters</a>
+                  </li>
+                  <li class="nav-item section-child">
+                    <a class="nav-link scrollto" href="#item-matrix-scheme-plans">Plans</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link scrollto" href="#item-2-investment-control">Investment Controls</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link scrollto" href="#item-2-trade-activity">Trade Activity</a>
+              </li>
+
+              <li class="nav-item">
+                <a class="nav-link scrollto" href="#item-2-manage-appearance">Manage Appearance</a>
+                <ul class="nav flex-column mt-1 lvl3">
+                  <li class="nav-item section-child">
+                    <a class="nav-link scrollto" href="#item-manage-appearance-about-section">About Section</a>
+                  </li>
+                  <li class="nav-item section-child">
+                    <a class="nav-link scrollto" href="#item-manage-appearance-advertise-section">Advertise Section</a>
+                  </li>
+                  <li class="nav-item section-child">
+                    <a class="nav-link scrollto" href="#item-manage-appearance-banner-section">Banner Section</a>
+                  </li>
+                  <li class="nav-item section-child">
+                    <a class="nav-link scrollto" href="#item-manage-appearance-blog-section">Blog Section</a>
+                  </li>
+                  <li class="nav-item section-child">
+                    <a class="nav-link scrollto" href="#item-manage-appearance-choose-us-section">Choose Us</a>
+                  </li>
+                  <li class="nav-item section-child">
+                    <a class="nav-link scrollto" href="#item-manage-appearance-contact-section">Contact</a>
+                  </li>
+                  <li class="nav-item section-child">
+                    <a class="nav-link scrollto" href="#item-manage-appearance-cookie-section">Cookie</a>
+                  </li>
+                  <li class="nav-item section-child">
+                    <a class="nav-link scrollto" href="#item-manage-appearance-crypto-coin-section">Crypto Coin</a>
+                  </li>
+                  <li class="nav-item section-child">
+                    <a class="nav-link scrollto" href="#item-manage-appearance-crypto-pairs-section">Crypto Pairs</a>
+                  </li>
+                  <li class="nav-item section-child">
+                    <a class="nav-link scrollto" href="#item-manage-appearance-currency-exchange-section">Currency Exchange</a>
+                  </li>
+                  <li class="nav-item section-child">
+                    <a class="nav-link scrollto" href="#item-manage-appearance-faq-section-section">FAQ Section</a>
+                  </li>
+                  <li class="nav-item section-child">
+                    <a class="nav-link scrollto" href="#item-manage-appearance-feature-section">Feature</a>
+                  </li>
+                  <li class="nav-item section-child">
+                    <a class="nav-link scrollto" href="#item-manage-appearance-footer-section">Footer Section</a>
+                  </li>
+                  <li class="nav-item section-child">
+                    <a class="nav-link scrollto" href="#item-manage-appearance-matrix-plan-section">Matrix Plan</a>
+                  </li>
+                  <li class="nav-item section-child">
+                    <a class="nav-link scrollto" href="#item-manage-appearance-page-section">Page</a>
+                  </li>
+                  <li class="nav-item section-child">
+                    <a class="nav-link scrollto" href="#item-manage-appearance-investment-plan-section">Investment Plan</a>
+                  </li>
+                  <li class="nav-item section-child">
+                    <a class="nav-link scrollto" href="#item-manage-appearance-process-section">Process Section</a>
+                  </li>
+                  <li class="nav-item section-child">
+                    <a class="nav-link scrollto" href="#item-manage-appearance-service-section">Service Section</a>
+                  </li>
+                  <li class="nav-item section-child">
+                    <a class="nav-link scrollto" href="#item-manage-appearance-sign-in-section">Sign In</a>
+                  </li>
+                  <li class="nav-item section-child">
+                    <a class="nav-link scrollto" href="#item-manage-appearance-sign-up-section">Sign Up</a>
+                  </li>
+                  <li class="nav-item section-child">
+                    <a class="nav-link scrollto" href="#item-manage-appearance-social-section">Social Section</a>
+                  </li>
+                  <li class="nav-item section-child">
+                    <a class="nav-link scrollto" href="#item-manage-appearance-testimonial-section">Testimonial</a>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+
+          <!-- User Panel -->
+          <li class="nav-item section-title">
+            <a class="nav-link scrollto" href="#section-user">User Panel</a>
+            <ul class="nav flex-column mt-2 lvl2">
+              
+              <li class="nav-item">
+                <a class="nav-link scrollto" href="#item-2-user-deposit">Deposit Cash</a>
+                <ul class="nav flex-column mt-1 lvl3">
+                  <li class="nav-item section-child">
+                    <a class="nav-link scrollto" href="#item-user-wallet-top-up">Wallet Top-Up</a>
+                  </li>
+                </ul>
+              </li>
+
+              <li class="nav-item">
+                <a class="nav-link scrollto" href="#item-2-user-matrix-scheme">Matrix Scheme</a>
+              </li>
+             
+              <li class="nav-item">
+                <a class="nav-link scrollto" href="#item-2-user-investment-scheme">Investment Scheme</a>
+              </li>
+
+              <li class="nav-item">
+                <a class="nav-link scrollto" href="#item-2-user-trades">Trading</a>
+                <ul class="nav flex-column mt-1 lvl3">
+                  <li class="nav-item section-child">
+                    <a class="nav-link scrollto" href="#item-user-binary-trade">Binary Trade</a>
+                  </li>
+                  <li class="nav-item section-child">
+                    <a class="nav-link scrollto" href="#item-user-practice-trade">Practice trade</a>
+                  </li>
+                </ul>
+              </li>
+
+              <li class="nav-item">
+                <a class="nav-link scrollto" href="#item-2-user-cash-out">Cash Out</a>
+              </li>
+
+              <li class="nav-item">
+                <a class="nav-link scrollto" href="#item-2-user-referral">Referrals</a>
+              </li>
+            </ul>
+          </li>
+
+          <!-- Support Area -->
+          <li class="nav-item section-title">
+            <a class="nav-link scrollto" href="#section-support">Help & Support</a>
+            <ul class="nav flex-column mt-2 lvl2">
+              <li class="nav-item">
+                <a class="nav-link scrollto" href="#user-support">Support</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+    </div>
+
+
+    <div class="docs-content">
+      <div class="container">
+
+
+        <article class="docs-article" id="section-intro">
+          <header class="docs-header">
+            <h1 class="docs-heading">Overview</h1>
+            <section class="docs-intro" id="overview">
+              <p>
+                FinFunder is a cutting-edge cryptocurrency investment and trading application. This documentation provides a comprehensive guide for installing and configuring FinFunder in both local development environments and production servers.
+              </p> 
+            </section>
+          </header>
+
+          <section class="docs-article" id="requirment">
+            <h2 class="section-heading">System Requirements</h2>
+            <p>
+              Before proceeding with the installation, ensure that your system meets the following requirements:
+            </p>
+            <p>PHP Requirements (Laravel-specific)</p>
+            <ul>
+              <li>PHP &gt;= 8+</li>
+              <li>BCMath PHP Extension</li>
+              <li>GD Extension</li>
+              <li>Ctype PHP Extension</li>
+              <li>Fileinfo PHP extension</li>
+              <li>JSON PHP Extension</li>
+              <li>Mbstring PHP Extension</li>
+              <li>OpenSSL PHP Extension</li>
+              <li>PDO PHP Extension</li>
+              <li>Tokenizer PHP Extension</li>
+              <li>XML PHP Extension</li>
+            </ul>
+          </section>
+
+          <section class="docs-article" id="install-local">
+            <h2 class="section-heading">Installation On Local</h2>
+            <p>
+              Follow these steps to successfully install on your localhost (XAMPP/LAMP/WAMP):
+            </p>
+            <p> 
+              <h5>Step-01: Extract ZIP and Place Files</h5>
+              <ul>
+                <li>Extract the main installation files from the downloaded archive.</li>
+                <li>Move the extracted files to your local server's www directory (for WAMP) or htdocs directory (for XAMPP).</li>
+              </ul>
+              <img src="images/installation/local-files.png" class="w-100">
+            </p>
+            <p> 
+              <h5>Step-02: Create a Database</h5>
+              <ul>
+                <li>Open web browser and navigate to phpMyAdmin.</li>
+                <li>Create a new database that will be used by application.</li>
+              </ul>
+              <img src="images/installation/database_create.png" class="w-100">
+            </p>
+
+            <p> 
+              <h5>Step-03: Access the Installation Wizard</h5>
+              <ul>
+                <li>Launch your web browser.</li>
+                <li>Enter the following URL in the address bar: http://localhost/myscript (replace myscript with the appropriate folder name you used in your localhost server).</li>
+              </ul>
+            </p>
+
+            <p> 
+              <h5>Step-04: Installation Process</h5>
+              <ul>
+                <li>The installation wizard will load, checking if your server meets the requirements. Make sure your server meets all the requirements listed.
+                  <img src="images/installation/ins-1.png" class="w-100">
+                </li>
+                <li>Grant the Necessary Permissions.
+                  <img src="images/installation/ins-2.png" class="w-100">
+                </li>
+                <li>Configure the Environment: Define App Name, Base URL, Database Details, and Access Credentials as established in the previous step for continued setup.
+                  <img src="images/installation/ins-3.png" class="w-100">
+                </li>
+                <li>After establishing a successful database connection, proceed to create an administrator account by providing the following information for the next step.
+                  <img src="images/installation/ins-4.png" class="w-100">
+                </li>
+                <li>Installation Successful! Upon receiving a success message. You can now enjoy FinFunder script and here you can Access <b>Admin Panel</b> | <b>User Panel</b> | <b>Frontend Panel</b>
+                  <img src="images/installation/ins-5.png" class="w-100">
+                </li>
+              </ul> 
+            </p>
+          </section>
+
+          <section class="docs-article" id="install-server">
+            <h2 class="section-heading">Installation On Server</h2>
+            <p>
+              Follow these steps to successfully install on your server (Apache |
+               Nginx) using any webpanel (cPanel | hPanel | Plesk | CloudPanel | aPanel):
+            </p>
+            <p> 
+              <h5>Step-01: Extract ZIP and Place Files</h5>
+              <ul>
+                <li>Extract the main installation files from the downloaded archive.</li>
+                <li>Transfer the extracted files to the www directory on your server, ensuring placement within the public_html folder as per your panel's structure. Here's the hPanel given screenshot</li>
+              </ul>
+              <img src="images/installation/server-files.png" class="w-100">
+            </p>
+            <p> 
+              <h5>Step-02: Create a Database</h5>
+              <ul>
+                <li>Navigate to the 'Database' section in hPanel and access the database wizard to create a new database, along with database user and password.
+                  <img src="images/installation/hp-db-create.png" class="w-100">
+                </li>
+              </ul>
+            </p>
+
+            <p> 
+              <h5>Step-03: Access the Installation Wizard</h5>
+              <ul>
+                <li>Launch your web browser.</li>
+                <li>Enter the following URL in the address bar: https://{{your domain}} (replace myscript with the appropriate folder name you used in your server).</li>
+              </ul>
+            </p>
+
+            <p> 
+              <h5>Step-04: Installation Process</h5>
+              <ul>
+                <li>The installation wizard will load, checking if your server meets the requirements. Make sure your server meets all the requirements listed.
+                  <img src="images/installation/ins-1.png" class="w-100">
+                </li>
+                <li>Grant the Necessary Permissions.
+                  <img src="images/installation/ins-2.png" class="w-100">
+                </li>
+                <li>Configure the Environment: Define App Name, Base URL, Database Details, and Access Credentials as established in the previous step for continued setup.
+                  <img src="images/installation/ins-3.png" class="w-100">
+                </li>
+                <li>After establishing a successful database connection, proceed to create an administrator account by providing the following information for the next step.
+                  <img src="images/installation/ins-4.png" class="w-100">
+                </li>
+                <li>Completion Successful! Upon receiving a success message. You can now enjoy FinFunder script and here you can Access Admin Panel | User Panel | Frontend Panel
+                  <img src="images/installation/ins-5.png" class="w-100">
+                </li>
+              </ul> 
+            </p>
+          </section>
+
+          <section class="docs-article" id="update-process">
+            <h2 class="section-heading">Update Process</h2>
+            <p>
+              Follow these steps to successfully update on your locally or server (Apache |
+               Nginx) using any webpanel (cPanel | hPanel | Plesk | CloudPanel | aPanel):
+            </p>
+            <p> 
+              <h5>Step-01: Extract ZIP and Place Files</h5>
+              <ul>
+                <li>Extract the main update files from the downloaded archive.</li>
+                <li>Transfer the extracted files to the www directory on your local or server, ensuring placement within the public_html folder as per your panel's structure. Here's the hPanel given screenshot</li>
+              </ul>
+              <img src="images/update/update-1.png" class="w-100">
+              <img src="images/update/update-2.png" class="w-100">
+              <p>
+                <ul>
+                  <li>Now For this version 1.1 you have to put a Key in .env file <code>APP_CURRENT_VERSION=</code></li> 
+                </ul>
+                <img src="images/update/update-2.1.png" class="w-100">
+              </p>
+            </p>
+            <p> 
+              <h5>Step-02: Cache Clean & Enter In Update</h5>
+              <ul>
+                <li>Navigate to 'Menu' and select 'Cache Clean'.</li>
+                <li>Click on 'Application Settings' located at the bottom of the page.</li>
+                <li>Scroll down to find the 'System Update' features.</li>
+              </ul>
+              <img src="images/update/update-3.png" class="w-100">
+              <img src="images/update/update-4.png" class="w-100">
+              <img src="images/update/update-5.png" class="w-100">
+            </p> 
+          </section> 
+        </article>
+
+
+        <!-- Admin Panel -->
+        <article class="docs-article" id="section-admin-panel">
+          <header class="docs-header">
+            <h1 class="docs-heading">Admin Panel</h1>
+            <section class="docs-intro">
+              <p>
+                This menu serves as a comprehensive hub for administrators to manage essential aspects of the platform. Within this menu, administrators can configure basic settings under the general section, fine-tune system settings, modify commission and charges structures, set up KYC procedures, configure various plugins, access system information, and implement automation and controls for different languages, offering a centralized and efficient platform management experience.
+              </p>
+              <img src="images/admin_panel/overview.png" class="mb-3 img-fluid w-100">
+            </section>
+          </header>
+
+          <section class="docs-section" id="item-2-application-setting">
+            <h2 class="section-heading">Application Setting</h2>
+            <p>This menu allows an admin to configure settings for various basic settings under the general section, configure system settings, modfy and update commision & charges, configure KYC, Configure various plugins, check the system informations, get automation and controls for languages</p>
+            <img src="images/admin_panel/application_setting/overview.png" class="w-100">
+          </section>
+
+          <section class="docs-section" id="item-application-setting-general">
+            <h2 class="section-heading">General</h2>
+            <p>General Settings allows an Admin to configure a lot of basic features for the application. Here is a brief for each of them: </p>
+        
+            <h5 class="pt-3">
+              <i class="fas fa-question-circle me-1"></i>Basic Settings
+            </h5>
+            <p>Within the "Basic Settings" tab of the Admin Panel, administrators wield the ability to swiftly modify and update fundamental aspects of the trading software. This section provides a streamlined interface where administrators can adjust critical parameters including the site title, application timezone, currency code, currency symbol, contact information such as phone number, email, and address, pagination settings, and copyright text. Upon making alterations, administrators can seamlessly save the updated data with a simple click of the "save" button, ensuring that essential information is accurately reflected throughout the platform. This intuitive functionality empowers administrators to maintain currency, consistency, and relevance within the trading software, facilitating a seamless user experience while reinforcing brand identity and regulatory compliance.</p>
+            <img src="images/admin_panel/application_setting/General/basic.png" class="w-100">
+            <h5 class="pt-3">
+              <i class="fas fa-question-circle me-1"></i>Social Login
+            </h5>
+            <p>To enable social login functionality for Google and Facebook, provide the respective Client ID and Client Secret in the fields below and click 'Save' to integrate.</p>
+            <img src="images/admin_panel/application_setting/General/social_login.png" class="w-100">
+            <h5 class="pt-3">
+              <i class="fas fa-question-circle me-1"></i>Theme Settings
+            </h5>
+            <p>To customize theme colors, specify Primary Color, Secondary Color, Primary Text Color, and Secondary Text Color, then click 'Save'.</p>
+            <img src="images/admin_panel/application_setting/General/theme_color.png" class="w-100">
+            <h5 class="pt-3">
+              <i class="fas fa-question-circle me-1"></i>Logo Settings
+            </h5>
+            <p>To configure logo settings, upload images for Dark Background Logo, White Background Logo, and Favicon, then click 'Save'.</p>
+            <img src="images/admin_panel/application_setting/General/logo_settings.png" class="w-100">
+            <h5 class="pt-3">
+              <i class="fas fa-question-circle me-1"></i>SEO Settings
+            </h5>
+            <p>To optimize SEO, input Title, upload an image, provide keywords, and write a description, then click 'Save'.</p>
+            <img src="images/admin_panel/application_setting/General/seo_settings.png" class="w-100">
+            <h5 class="pt-3">
+              <i class="fas fa-question-circle me-1"></i>reCAPTCHA Settings
+            </h5>
+            <p>To set up reCAPTCHA, enter Key and Secret, then toggle options to enable reCAPTCHA for user registration and login, and click 'Save'.</p>
+            <img src="images/admin_panel/application_setting/General/recaptcha_settings.png" class="w-100">
+          </section>
+
+          <section class="docs-section" id="item-application-setting-system-configuration">
+            <h2 class="section-heading">System Configuration</h2>
+            <p>The "System Configuration" option offers toggle options to enable or disable various features like Balance Transfer, E Pin, Withdraw Request, and more, allowing administrators to customize system functionality to suit organizational requirements.</p>
+            <img src="images/admin_panel/application_setting/system_configuration/overview.png" class="w-100">
+            <h5>The available configurations</h5>
+            <ul>
+              <li><strong class="me-1">Balance Transfer</strong></li>
+              <li><strong class="me-1">E Pin</strong></li>
+              <li><strong class="me-1">Withdraw Request</strong></li>
+              <li><strong class="me-1">Binary Trade</strong></li>
+              <li><strong class="me-1">Practice Trade</strong></li>
+              <li><strong class="me-1">Registration Status</strong></li>
+              <li><strong class="me-1">Email Verification</strong></li>
+              <li><strong class="me-1">Email Notification</strong></li>
+              <li><strong class="me-1">Sms Notification</strong></li>
+              <li><strong class="me-1">Kyc Verification</strong></li>
+              <li><strong class="me-1">Cookie Activation</strong></li>
+              <li><strong class="me-1">Language</strong></li>
+            </ul>
+          </section>
+
+          <section class="docs-section" id="item-application-setting-comission-charges">
+            <h2 class="section-heading">Commission & Charges</h2>
+            <p>By the help of 'Commissions & Charges' panel, admins can mopdify <strong class="me-1">Investment Transfer Charge</strong>, <strong class="me-1">Investment Cancel Charge</strong>, <strong class="me-1">E Pin Charge</strong>, <strong class="me-1">Balance Transfer Charge</strong>, <strong class="me-1">Binary Trade Commissions</strong>, <strong class="me-1">Trade Practice Balance</strong>. After modifications simply click on 'Submit' to save these informations.</p>
+            <img src="images/admin_panel/application_setting/comission_charge/overview.png" class="w-100">
+          </section>
+
+          <section class="docs-section" id="item-application-setting-kyc-configuration">
+            <h2 class="section-heading">KYC Configuration</h2>
+            <p>Navigate to the 'Application Settings' panel and select 'Change Settings' within the KYC Configuration section to access the 'Identity Verification Setup'. Here, administrators can tailor identity collection options by adding additional parameters. Users can be subjected to multiple conditions based on their specific identification requirements.</p>
+            <img src="images/admin_panel/application_setting/kyc_configuration/overview.png" class="w-100">
+          </section>
+
+          <section class="docs-section" id="item-application-setting-plugin-configuration">
+            <h2 class="section-heading">Plugin Configuration</h2>
+            <p>Navigate to the 'Application Settings' panel and select 'Change Settings' within the Plugin Configuration section to access the plugin setup. Here, administrators can configur the plugins for <strong>Tawk.to</strong>, <strong>Google Analytics</strong> & <strong>Hoory</strong>Add the API key for the plugin you want to enable and click on 'Submit' to save. If you want to Activated the plugin just save the status as active and if you want to keep the plugin Inactive then save the status as inactive.</p>
+            <img src="images/admin_panel/application_setting/Plugin/overview.png" class="w-100">
+          </section>
+
+          <section class="docs-section" id="item-application-system-information">
+            <h2 class="section-heading">System Information</h2>
+            <p>Navigate to the 'Application Settings' panel and select 'Change Settings' within the System Information section to access the 'Application Information' Section. Application permissions and other related informations can be seen here.</p>
+            <img src="images/admin_panel/application_setting/System Information/overview.png" class="w-100">
+          </section>
+
+          <section class="docs-section" id="item-application-setting-automation">
+            <h2 class="section-heading">Automation</h2>
+            <p>Navigate to the 'Application Settings' panel and select 'Change Settings' within the KYC Configuration section to access the 'Automation'. From here admin can get access to cron job url to enable the site's automation functionalities.</p>
+            <img src="images/admin_panel/application_setting/automation/overview.png" class="w-100">
+          </section>
+
+          <section class="docs-section" id="item-application-setting-manage-language">
+            <h2 class="section-heading">Manage Language</h2>
+            <p>Navigate to the 'Application Settings' panel and select 'Change Settings' within the Manage Language section to access the 'Language Setup'. Here, administrators can add, update or delete languages per requirement.</p>
+            <img src="images/admin_panel/application_setting/languages/overview.png" class="w-100">
+
+            <h5 class="pt-3">
+              <i class="fas fa-question-circle me-1"></i>Add Language
+            </h5>
+            <p>Click on 'Add New' button and a dialog box will appear. Filling up the form with required information and clicking on 'Submit' will save the new language</p>
+            <img src="images/admin_panel/application_setting/languages/add.png" class="w-100">
+            <h5 class="pt-3">
+              <i class="fas fa-question-circle me-1"></i>Edit Language keys for translation
+            </h5>
+            <p>To add translations for a specific lanuage click on 'Translate' then click the 'Add New' button. And add data to the dialog box, submit to save that key for translation.</p>
+            <img src="images/admin_panel/application_setting/languages/add_keys.png" class="w-100">
+            <h5 class="pt-3">
+              <i class="fas fa-question-circle me-1"></i>Import Language
+            </h5>
+            <p>To import keywords for a language, click on 'Import Keywords' then choose the language you want and click on submit</p>
+            <img src="images/admin_panel/application_setting/languages/import.png" class="w-100">
+          </section>
+
+          <section class="docs-section" id="item-2-security-firewall">
+            <h2 class="section-heading">Security Firewall</h2>
+            <p>In this section, administrators can configure the diverse security features of the application.</p>
+            <h5 class="pt-3" id="item-security-firewall-settings">
+              <i class="fas fa-question-circle me-1"></i>Settings
+            </h5>
+            <p>Within the 'Security Firewall' section, administrators can access the 'Settings' submenu to enhance the website's security. By clicking on this submenu, administrators are presented with a form where they can adjust parameters such as the total number of login attempts allowed within specified time periods. Additionally, administrators have the option to activate or deactivate this feature based on the current status.</p>
+            <img src="images/admin_panel/Security Firewalll/image 15.png" class="w-100">
+          </section>
+
+          <section class="docs-section" id="item-2-transaction-services">
+            <h2 class="section-heading">Transaction Servicees</h2>
+            <p>Within this section of the admin sidebar, administrators have access to menus dedicated to modifying various transaction-related services.</p>
+            <h4 class="pt-3" id="item-transaction-services-manage-pins">
+              <i class="fas fa-question-circle me-1"></i>Manage Pins
+            </h4>
+            <p>In the 'Transaction Services' section, administrators can navigate to the 'Manage Pins' menu. Upon clicking, administrators are presented with a table displaying all available pins. To generate new pins, administrators simply click on 'Generate New Pins', fill out the form specifying the desired number of pins and their corresponding amounts, then submit the form to generate the pins.</p>
+            <img src="images/admin_panel/transaction_services/manage_pins.png" class="w-100">
+            <h4 class="pt-3" id="item-transaction-services-payment-process">
+              <i class="fas fa-question-circle me-1"></i>Payment Process
+            </h4>
+            <p>Transactions within the application can be conducted through two distinct methods. The automated process utilizes payment gateways to seamlessly complete transactions, while the manual process enables administrators to manually execute transactions without relying on a payment gateway.</p>
+            <h5 class="pt-3">
+              <i class="fas fa-question-circle me-1"></i>Automatic Payment Process
+            </h5>
+            <p>Within the application, administrators have the option to select from a variety of available payment gateways. For this example, let's choose Coinbase. By clicking on 'Edit', administrators can input their own Coinbase credentials into the provided form. After filling out the form, simply click 'Save'. This enables users to seamlessly complete their transactions through the Coinbase gateway.</p>
+            <img src="images/admin_panel/transaction_services/automatic_payment.png" class="w-100">
+            <h5 class="pt-3">
+              <i class="fas fa-question-circle me-1"></i>Manual Payment Process
+            </h5>
+            <p>Within the application, administrators can establish a manual payment gateway to track transactions conducted without using a gateway. To do so, navigate to the Payment Process menu, then select the 'Traditional' submenu. Click on the 'Add New Manual Gateway' button and complete the provided form. Upon filling out the form, click 'Save'. Users can now utilize this payment system to complete their transactions efficiently.</p>
+            <img src="images/admin_panel/transaction_services/traditional_payment.png" class="w-100">
+            <h4 class="pt-3" id="item-transaction-services-manage-withdraws">
+              <i class="fas fa-question-circle me-1"></i>Manage Withdraw
+            </h4>
+            <p>In the 'Transaction Services' section, administrators can navigate to the 'Manage Withdraw' menu. Upon clicking, Admin can find a submenu called 'Gateway'. Clicking on it will reveal the list for available Withdraw Gateway Methods. To add a new withdraw method click on the 'Add New Method' button and fill up the form click on 'save' to save the withdraw gateway method.</p>
+            <img src="images/admin_panel/transaction_services/manage_withdraw.png" class="w-100">
+          </section>
+
+          <section class="docs-section" id="item-2-matrix-scheme">
+            <h2 class="section-heading">Matrix Scheme</h2>
+            <p>To create a <strong>matrix scheme</strong> for users, administrators can access the 'Matrix Scheme' menu and expand it, then select the 'Scheme' sub-menu. Here, they are presented with two options at the top of the table: one to define the amount parameters and the other to create the plan itself.</p>
+            <img src="images/admin_panel/matrix_scheme/overview.png" class="w-100">
+            <h4 class="pt-3" id="item-matrix-scheme-parameters">
+              <i class="fas fa-question-circle me-1"></i>Matrix Parameters
+            </h4>
+            <p>In order to modify the height and width of the matrix, click on the <strong>Matrix Parameter</strong> button. Modify the values as needed then click on 'save'.</p>
+            <img src="images/admin_panel/matrix_scheme/matrix_parameter.png" class="w-100">
+            <h4 class="pt-3" id="item-matrix-scheme-plans">
+              <i class="fas fa-question-circle me-1"></i>Plans
+            </h4>
+            <p>Admin can create new plans for their <strong>Matrix Schemes</strong>. Click on the 'Add New Plan' button. Fill up the form with necessary data. And add values for each <strong>Referral Commission.</strong></p>
+            <img src="images/admin_panel/matrix_scheme/matrix_plans.png" class="w-100">
+
+            <div class="callout-block callout-block-info">
+              <div class="content">
+                <h4 class="callout-title">Note For Referral Comissions</h4>
+                <p>The number of levels can be modified or updated by changing the parameter height and width in the 
+                  <a href="#item-matrix-scheme-parameters">Matrix Parameters</a>
+                </p>
+              </div>
+            </div>
+          </section>
+
+          <section class="docs-section" id="item-2-investment-control">
+            <h2 class="section-heading">Investment Controls</h2>
+            <p>To create an <strong>investment scheme</strong> for users, administrators can access the 'Investment Controls' menu and expand it, then select the 'Plan' sub-menu. Here, Then click on the 'Add New Scheme' button. Fill up the form as per your liking. And click on 'Submit' to save the form.</p>
+            <img src="images/admin_panel/investment_scheme/overview.png" class="w-100">
+
+            <div class="callout-block callout-block-success">
+              <div class="content">
+                <h4 class="callout-title">Investment Scheme Tip</h4>
+                <p>Turn on the toggle within the <strong>Notify Users</strong>. To let them know about your new investment scheme.</p>
+              </div>
+            </div>
+          </section>
+
+          <section class="docs-section" id="item-2-trade-activity">
+            <h2 class="section-heading">Trade Activity</h2>
+            <p>To add new parameters for Trading. Navigate to the <strong>Trade Activity</strong> and expand it. Select 'Parameter' sub-menu. Then click on the 'Add New Parameter' button from the page. Which will bring a dialog box. Choose time, unit and status and click on 'save'</p>
+            <img src="images/admin_panel/Trade Activity/overview.png" class="w-100">
+          </section>
+
+          <section class="docs-section" id="item-2-manage-appearance">
+            <h2 class="section-heading">Manage Appearance</h2>
+            <p>To update the frontend from the Admin Panel, navigate to the <strong>Manage Appearance</strong> Menu. Here Admin can find each and every modification they can make to the frontend UI.</p>
+            <div class="callout-block callout-block-success">
+              <div class="content">
+                <h4 class="callout-title">Appearance Tip</h4>
+                <p>There is a 'Add New' button in a few sub menu forms. Clicking it will give admin additional cards to showcase their business ideas to customers more clearly in the frontend UI.</p>
+              </div>
+            </div>
+
+            <h4 class="pt-3" id="item-manage-appearance-about-section">
+              <i class="fas fa-question-circle me-1"></i>About Section
+            </h4>
+            <img src="images/admin_panel/appearance/about_section.png" class="w-100">
+            
+            <h4 class="pt-3" id="item-manage-appearance-advertise-section">
+              <i class="fas fa-question-circle me-1"></i>Advertise Section
+            </h4>
+            <img src="images/admin_panel/appearance/advertise.png" class="w-100">
+            
+            <h4 class="pt-3" id="item-manage-appearance-banner-section">
+              <i class="fas fa-question-circle me-1"></i>Banner Section
+            </h4>
+            <img src="images/admin_panel/appearance/banner.png" class="w-100">
+
+            <h4 class="pt-3" id="item-manage-appearance-blog-section">
+              <i class="fas fa-question-circle me-1"></i>Blog Section
+            </h4>
+            <img src="images/admin_panel/appearance/blog.png" class="w-100">
+
+            <h4 class="pt-3" id="item-manage-appearance-choose-us-section">
+              <i class="fas fa-question-circle me-1"></i>Choose Us
+            </h4>
+            <img src="images/admin_panel/appearance/choose.png" class="w-100">
+
+            <h4 class="pt-3" id="item-manage-appearance-contact-section">
+              <i class="fas fa-question-circle me-1"></i>Contact
+            </h4>
+            <img src="images/admin_panel/appearance/contact.png" class="w-100">
+
+            <h4 class="pt-3" id="item-manage-appearance-cookie-section">
+              <i class="fas fa-question-circle me-1"></i>Cookie
+            </h4>
+            <img src="images/admin_panel/appearance/cookie.png" class="w-100">
+
+            <h4 class="pt-3" id="item-manage-appearance-crypto-coin-section">
+              <i class="fas fa-question-circle me-1"></i>Crypto Coin
+            </h4>
+            <img src="images/admin_panel/appearance/crypto coin.png" class="w-100">
+
+            <h4 class="pt-3" id="item-manage-appearance-crypto-pairs-section">
+              <i class="fas fa-question-circle me-1"></i>Crypto Pairs
+            </h4>
+            <img src="images/admin_panel/appearance/crypto_pair.png" class="w-100">
+
+            <h4 class="pt-3" id="item-manage-appearance-faq-section-section">
+              <i class="fas fa-question-circle me-1"></i>FAQ Section
+            </h4>
+            <img src="images/admin_panel/appearance/faq.png" class="w-100">
+
+            <h4 class="pt-3" id="item-manage-appearance-feature-section">
+              <i class="fas fa-question-circle me-1"></i>Feature
+            </h4>
+            <img src="images/admin_panel/appearance/feature.png" class="w-100">
+
+            <h4 class="pt-3" id="item-manage-appearance-footer-section">
+              <i class="fas fa-question-circle me-1"></i>Footer Section
+            </h4>
+            <img src="images/admin_panel/appearance/footer.png" class="w-100">
+ 
+            <h4 class="pt-3" id="item-manage-appearance-matrix-plan-section">
+              <i class="fas fa-question-circle me-1"></i>Matrix Plan
+            </h4>
+            <img src="images/admin_panel/appearance/matrix_plan.png" class="w-100">
+ 
+            <h4 class="pt-3" id="item-manage-appearance-page-section">
+              <i class="fas fa-question-circle me-1"></i>Page
+            </h4>
+            <img src="images/admin_panel/appearance/page.png" class="w-100">
+ 
+            <h4 class="pt-3" id="item-manage-appearance-investment-plan-section">
+              <i class="fas fa-question-circle me-1"></i>Investment Plan
+            </h4>
+            <img src="images/admin_panel/appearance/investment.png" class="w-100">
+ 
+            <h4 class="pt-3" id="item-manage-appearance-process-section">
+              <i class="fas fa-question-circle me-1"></i>Process Section
+            </h4>
+            <img src="images/admin_panel/appearance/process.png" class="w-100">
+ 
+            <h4 class="pt-3" id="item-manage-appearance-service-section">
+              <i class="fas fa-question-circle me-1"></i>Service Section
+            </h4>
+            <img src="images/admin_panel/appearance/service.png" class="w-100">
+ 
+            <h4 class="pt-3" id="item-manage-appearance-sign-in-section">
+              <i class="fas fa-question-circle me-1"></i>Sign In
+            </h4>
+            <img src="images/admin_panel/appearance/sign_in.png" class="w-100">
+ 
+            <h4 class="pt-3" id="item-manage-appearance-sign-up-section">
+              <i class="fas fa-question-circle me-1"></i>Sign Up
+            </h4>
+            <img src="images/admin_panel/appearance/sign_up.png" class="w-100">
+ 
+            <h4 class="pt-3" id="item-manage-appearance-social-section">
+              <i class="fas fa-question-circle me-1"></i>Social Icon Section
+            </h4>
+            <img src="images/admin_panel/appearance/social_icon.png" class="w-100">
+ 
+            <h4 class="pt-3" id="item-manage-appearance-testimonial-section">
+              <i class="fas fa-question-circle me-1"></i>Testimonial
+            </h4>
+            <img src="images/admin_panel/appearance/testimonial.png" class="w-100">
+          </section>
+        </article>
+      
+        <!-- User Panel -->
+        <article class="docs-article" id="section-user">
+          <header class="docs-header">
+            <h1 class="docs-heading">User Panel</h1>
+            <section class="docs-intro">
+              <p>
+                The user panel of FinFunder provides users with a comprehensive platform to manage their financial activities efficiently. Upon registration and verification, users gain access to a dashboard where they can perform various operations. These include depositing funds using multiple payment methods, transferring funds between wallets, and engaging in investment schemes and cryptocurrency trading. The panel also incorporates a referral system where users can earn commissions by referring others. Additionally, users can request withdrawals, which are processed by the admin. Overall, the user panel offers a user-friendly interface for managing investments, trades, and financial transactions effectively.
+              </p>
+              <img src="images/user_panel/overview.png" class="mb-3 img-fluid w-100">
+            </section>
+            
+          </header>
+          <section class="docs-section" id="item-2-user-deposit">
+            <h3 class="section-heading">Deposit Cash</h3>
+            <p>
+              Users can easily deposit funds into their FinFunder accounts using a variety of payment methods, including PayPal, Stripe, Coinbase, and two manual payment options. They have the flexibility to choose from three different wallets—Primary Wallet, Trade Wallet, and Investment Wallet—where they can allocate their deposited funds. This feature enables users to seamlessly add funds to their accounts, facilitating their participation in various investment schemes and trading activities offered by FinFunder.
+            </p>
+            <h4 class="section-heading">Process:</h4>
+            <p>
+              To initiate a deposit, users navigate to the Deposit Menu in the sidebar. From there, they select their preferred gateway to allocate funds to a specific wallet. After entering the necessary information and completing the payment, the deposit process is finalized.
+            </p>
+            <img src="images/user_panel/deposit.png" class="mb-3 img-fluid w-100">
+          </section>
+
+          <section class="docs-section" id="item-user-wallet-top-up">
+            <h3 class="section-heading">Wallet Top Up</h3>
+            <p>
+              Users have the flexibility to transfer funds from their trade and investment wallets to their primary account, facilitating easy withdrawal upon request. Additionally, users can seamlessly share funds with other users within the platform, enhancing collaboration and financial management capabilities.
+            </p>
+            <h4 class="section-heading">Process:</h4>
+            <p>
+              To initiate a wallet balance transfer, users simply navigate to the "Wallet Top-Up" button located in the sections shown in the picture. Once there, they can effortlessly choose their desired wallet  and allocate funds to the primary wallet. After that just click on save to transfer funds. Users can also choose a nother user to share funds which will take cash from their primary balance.
+            </p>
+            <img src="images/user_panel/wallet-top-up.png" class="mb-3 img-fluid w-100">
+          </section>
+          
+          <section class="docs-section" id="item-2-user-matrix-scheme">
+            <h3 class="section-heading">Matrix Scheme</h3>
+            <p>
+              The Matrix Scheme offers users an opportunity to earn commissions by referring others to the FinFunder platform. With a multi-level commission structure, users receive rewards for each referral they make, as well as for referrals made by those they've referred. This incentivizes users to expand their network and generate passive income through successful referrals.
+            </p>
+            <h4 class="section-heading">Process:</h4>
+            <p>
+              To purchase a matrix plan, users navigate to the Matrix Menu in the sidebar. From there, they select their preferred plan and confirm the purchase. And that plan will be assigned for the user
+            </p>
+            <img src="images/user_panel/matrix_scheme.png" class="mb-3 img-fluid w-100">
+          </section>
+          <section class="docs-section" id="item-2-user-investment-scheme">
+            <h3 class="section-heading">Investment Scheme</h3>
+            <p>
+              The Investment Scheme provides users with various plans tailored to their financial goals. Users can invest within specified limits and durations, earning returns based on predetermined interest rates. With options suited for both beginners and experienced investors, the Investment Scheme offers a low-risk introduction to financial growth. Additionally, transparent terms and policies ensure users can confidently participate in investment activities within the FinFunder platform.
+            </p>
+            <h4 class="section-heading">Process:</h4>
+            <p>
+              To purchase an investment scheme, users navigate to the Investment Menu in the sidebar then select the scheeme sub menu. From there, they select their preferred scheme and confirm the purchase. And that scheme will be assigned for the user
+            </p>
+            <img src="images/user_panel/investment_process.png" class="mb-3 img-fluid w-100">
+          </section>
+          <section class="docs-section" id="item-2-user-trades">
+            <h3 class="section-heading">Trades</h3>
+            <p>
+              The Trade Feature empowers users to engage in cryptocurrency trading within the FinFunder platform. Users can place trades by specifying their desired amount and duration, with outcomes determined by market movements. Whether users anticipate gains or mitigate risks, this feature provides a dynamic environment for users to explore and capitalize on cryptocurrency markets. With intuitive controls and real-time insights, users can make informed decisions and optimize their trading strategies for potential profits.
+            </p>
+            <img src="images/user_panel/trades.png" class="mb-3 img-fluid w-100">
+            <h4 class="section-heading" id="item-2-user-binary-trade">Binary Trade:</h4>
+            <p>
+              To access the binary trade feature, users can effortlessly navigate to the "Trades" menu located in the sidebar. Upon arrival, they are presented with a comprehensive list of available cryptocurrencies. By selecting the desired cryptocurrency, users can proceed to initiate a binary trade by clicking on the trade button. From there, they input the amount, duration, and select an event outcome—either high or low—to execute the trade. This streamlined process ensures users can swiftly engage in binary trading activities within the FinFunder platform, facilitating efficient decision-making and market participation.
+            </p>
+            <h4 class="section-heading" id="item-2-user-practice-trade">Practice Trade:</h4>
+            <p>
+              In order to use the binary trade feature, simply head on to the trades menu from the sidebar. Then Users will see a list of available crypto currencies. Then click on the practice button to do the practice trading.
+            </p>
+           
+          </section>
+
+          <section class="docs-section" id="item-2-user-investment-scheme">
+            <h3 class="section-heading">Cash Out</h3>
+            <p>
+              Users can seamlessly request withdrawals of their available funds within the FinFunder platform. By navigating to the designated "Cash Out" section, conveniently located in the sidebar, users can initiate the withdrawal process. Following this, users input the desired withdrawal amount and select their preferred withdrawal method. Once the request is submitted, the admin reviews and processes the withdrawal request. Upon approval, users receive their funds via the chosen withdrawal method, ensuring a smooth and efficient cash-out experience.
+            </p>
+            <img src="images/user_panel/cashout.png" class="mb-3 img-fluid w-100">
+          </section>
+          <section class="docs-section" id="item-2-user-referral">
+            <h3 class="section-heading">Referrals</h3>
+            <p>
+              The Referral Program offers users the opportunity to earn rewards by referring new users to the FinFunder platform. Users can easily share their unique referral links with friends, family, or their network via various channels. When a new user signs up using the referral link, both the referrer and the new user receive benefits. The referrer earns commissions based on the activity of the referred user, while the new user can use the various features of the panel and they can refer other users as well. With a simple and intuitive referral process, users can leverage their networks to maximize their earnings and foster growth within the FinFunder community. (The commission relies on the <a href="#item-2-user-matrix-scheme">Matrix Scheme</a> )
+            </p>
+            <img src="images/user_panel/referral.png" class="mb-3 img-fluid w-100">
+          </section>
+        </article>
+
+
+        <article class="docs-article" id="section-user">
+          <header class="docs-header">
+            <h1 class="docs-heading">Help & Support</h1>
+            <section class="docs-intro">
+              <p>
+                If you have any questions, encounter issues, or need assistance with KloudInnovation, our dedicated support team is ready to assist you.
+                <br>
+                <br>
+                Don't hesitate to reach out for support:
+                <br>
+                <br>
+                Open a <a href="https://support.kloudinnovation.com/" target="_blank">Support Ticket</a>
+                <br>
+                <br>
+                At KloudInnovation, we are committed to delivering prompt and efficient responses, ensuring you have an exceptional experience with our services.
+              </p> 
+            </section>
+          </header>
+        </article>
+
+      </div>
+    </div>
+  </div>
+  <!--docs-wrapper-->
+
+  <!-- Modal -->
+  <div class="modal fade" id="changelogModal" tabindex="-1" aria-labelledby="changelogModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-scrollable">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h4 class="modal-title px-3 py-1" id="changelogModalLabel">Changelog</h4>
+            <button type="button" class="btn-close p-4" data-bs-dismiss="modal" aria-label="Close">
+            </button>
+          </div>
+          <div class="modal-body">
+            <div class="container">
+              <div class="row justify-content-center">
+                <div class="col-12">
+                  <h6 class="mt-3"> <span class="p-2"> Version 1.1</span>   21 April 2024</h6>
+                  <ul class="mt-3 mb-5">
+                    <li class="ms-3">Resolved server issues post-deployment.</li>
+                    <li>Addressed the notification error with status code 500 in the investment module.</li>
+                    <li>Added an update module.</li>
+                    <li>Optimized code.</li> 
+                  </ul>
+                </div>
+
+                <div class="col-12">
+                  <h6 class="mt-3"> <span class="p-2"> Version 1.0</span> 10 April 2024</h6>
+                  <ul class="mt-3 mb-5">
+                    <li class="ms-3">First Verison Releaase</li> 
+                    </ul>
+                </div>
+                <!--end col-->
+              </div>
+              <!--end row-->
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          </div>
+        </div>
+    </div>
+  </div>
+
+ 
+  <script type="text/javascript" src="js/jquery.js"></script>
+  <script type="text/javascript" src="js/bootstrap.js"></script>
+  <script type="text/javascript" src="js/zoom.js"></script>
+  <script type="text/javascript" src="js/flesler.js"></script>
+  <script type="text/javascript" src="js/fuse.js"></script> 
+  <script type="text/javascript" src="js/highlight.js"></script>
+  <script type="text/javascript" src="js/hljs.js"></script>
+  <script type="text/javascript" src="js/script.js"></script>
+</body>
+
+</html>
