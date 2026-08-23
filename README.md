@@ -55,7 +55,7 @@ A Laravel-based **crypto trading, investment, staking, and referral management p
 
 ## Prerequisites
 
-* PHP = 5.6
+* PHP = 8.2.33
 * Composer
 * Node.js & npm
 * MySQL
